@@ -32,11 +32,6 @@ jobs:
         env:
           MKGAL_EMAIL: ${{ secrets.MKGAL_EMAIL }}
           MKGAL_PASSWORD: ${{ secrets.MKGAL_PASSWORD }}
-          BILIBILI_COOKIE: ${{ secrets.BILIBILI_COOKIE }}
-          WXPUSHER_MY_WEIXIN_APPTOKEN: ${{ secrets.WXPUSHER_MY_WEIXIN_APPTOKEN }}
-          WXPUSHER_MY_WEIXIN_UIDS: ${{ secrets.WXPUSHER_MY_WEIXIN_UIDS }}
-          CLOUD_189_USER: ${{ secrets.CLOUD_189_USER }}
-          CLOUD_189_PASSWORD: ${{ secrets.CLOUD_189_PASSWORD }}
         run: |
           pipenv run python refresh.py
       #        python3 refresh.py
