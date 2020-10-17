@@ -17,7 +17,7 @@ except:
 class cloud_189_cn:
     def __init__(self):
         self.session = requests.session()
-        self.name = 'cloud_189_cn'
+        self.name = 'cloud.189.cn'
         self.date = time.strftime("%Y-%m-%d", time.localtime())
         self.log_head = f'[{self.date}][{self.name}] '
         self.email = tools.get_environment_variables('CLOUD_189_EMAIL')
