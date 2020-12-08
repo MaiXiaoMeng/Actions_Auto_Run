@@ -482,3 +482,9 @@
 [2020-12-07][tieba.baidu.com] 获取TBS:9dbc32a8494515081607361472
 [2020-12-07][tieba.baidu.com] 获取关注的贴吧: 31 个
 [2020-12-07][tieba.baidu.com] 签到结束
+[2020-12-08][www.mikugal.com] 用户名:麦小萌 当前金币:187 + 2
+[2020-12-08][www.mikugal.com] 每日签到成功
+[2020-12-08][cloud.189.cn] 帐号登录失败
+[2020-12-08][tieba.baidu.com] 获取TBS:85dd39a9fbf9d6b41607448071
+[2020-12-08][tieba.baidu.com] 获取关注的贴吧: 31 个
+[2020-12-08][tieba.baidu.com] 签到结束
