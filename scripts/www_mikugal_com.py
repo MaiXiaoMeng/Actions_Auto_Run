@@ -1,3 +1,10 @@
+'''
+Author: MaiXiaoMeng
+Date: 2021-01-16 11:14:04
+LastEditors: MaiXiaoMeng
+LastEditTime: 2021-01-16 11:41:25
+FilePath: \actions_auto_run\scripts\www_mikugal_com.py
+'''
 
 import time
 import requests

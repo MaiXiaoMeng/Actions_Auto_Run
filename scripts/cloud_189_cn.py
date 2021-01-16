@@ -164,5 +164,3 @@ class cloud_189_cn:
             print(error)
 
 
-if __name__ == "__main__":
-    cloud_189_cn().run()

@@ -1,3 +1,10 @@
+'''
+Author: MaiXiaoMeng
+Date: 2021-01-16 11:14:04
+LastEditors: MaiXiaoMeng
+LastEditTime: 2021-01-16 11:39:27
+FilePath: \actions_auto_run\scripts\dagongren_club.py
+'''
 import math
 import random
 import requests
@@ -25,10 +32,21 @@ class dagongren_club:
         requests.post(
             f'{self.base_url}/api/threads', headers=self.headers, data=data
         )
-        
+
+    def generate_random_gps(base_log=None, base_lat=None, radius=None):
+        radius_in_degrees = radius / 111300
+        u = float(random.uniform(0.0, 1.0))
+        v = float(random.uniform(0.0, 1.0))
+        w = radius_in_degrees * math.sqrt(u)
+        t = 2 * math.pi * v
+        x = w * math.cos(t)
+        y = w * math.sin(t)
+        longitude = y + base_log
+        latitude = x + base_lat
+        return longitude, latitude
 
     def run(self):
-        log, lat = generate_random_gps(
+        log, lat = self.generate_random_gps(
             base_log=102.7, base_lat=25, radius=100000
         )
         location = ["左心房", "右心房"]
@@ -68,15 +86,3 @@ class dagongren_club:
             }
         }
         self.create_new_theme_interface(data)
-
-def generate_random_gps(base_log=None, base_lat=None, radius=None):
-    radius_in_degrees = radius / 111300
-    u = float(random.uniform(0.0, 1.0))
-    v = float(random.uniform(0.0, 1.0))
-    w = radius_in_degrees * math.sqrt(u)
-    t = 2 * math.pi * v
-    x = w * math.cos(t)
-    y = w * math.sin(t)
-    longitude = y + base_log
-    latitude = x + base_lat
-    return longitude, latitude

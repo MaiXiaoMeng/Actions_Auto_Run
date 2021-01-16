@@ -1,3 +1,10 @@
+'''
+Author: MaiXiaoMeng
+Date: 2021-01-16 11:14:04
+LastEditors: MaiXiaoMeng
+LastEditTime: 2021-01-16 11:41:00
+FilePath: \actions_auto_run\scripts\tieba_baidu_com.py
+'''
 # -*- coding:utf-8 -*-
 import os
 from os import error
@@ -193,7 +200,3 @@ class tieba_baidu_com:
             message_context = f'运行异常,脚本又挂掉啦~'
             tools.send_message(self.log_head + message_context)
             print(error)
-
-
-if __name__ == '__main__':
-    tieba_baidu_com().run()
