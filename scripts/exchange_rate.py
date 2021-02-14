@@ -2,7 +2,7 @@
 Author: MaiXiaoMeng
 Date: 2021-02-13 16:56:08
 LastEditors: MaiXiaoMeng
-LastEditTime: 2021-02-14 15:35:05
+LastEditTime: 2021-02-14 15:56:18
 '''
 import sqlite3
 import requests
@@ -29,17 +29,21 @@ class exchange_rate:
     def get_latest_rate(self, symbols=''):
         for _rate_code in self.rate_code:
             url = f'https://api.exchangerate-api.com/v4/latest/{_rate_code}'
+            print(url)
             self.json = requests.get(url).json()
             self.save_rate_data()
 
     def save_rate_data(self):
         for key in list(self.json['rates'].keys()):
-            self.conn.execute(
-                f'INSERT INTO "main"."库存管理_历史汇率"("日期", "本币", "外币", "汇率") VALUES ("{self.json["date"]}", "{self.json["base"]}","{key}", "{self.json["rates"][key]}")')
-            self.conn.commit()
+            try:
+                self.conn.execute(
+                    f'INSERT INTO "main"."库存管理_历史汇率"("日期", "本币", "外币", "汇率") VALUES ("{self.json["date"]}", "{self.json["base"]}","{key}", "{self.json["rates"][key]}")')
+                self.conn.commit()
+            except Exception as error:
+                print(error)
 
     def open_database(self):
-        self.conn = sqlite3.connect('scripts\exchange_rate.db')
+        self.conn = sqlite3.connect('scripts/exchange_rate.db')
         self.cursor = self.conn.cursor()
 
     def close_database(self):
