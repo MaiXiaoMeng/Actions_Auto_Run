@@ -2,7 +2,7 @@
 Author: MaiXiaoMeng
 Date: 2021-02-13 16:56:08
 LastEditors: MaiXiaoMeng
-LastEditTime: 2021-02-14 15:14:29
+LastEditTime: 2021-02-14 15:35:05
 '''
 import sqlite3
 import requests
@@ -39,7 +39,7 @@ class exchange_rate:
             self.conn.commit()
 
     def open_database(self):
-        self.conn = sqlite3.connect('exchange_rate.db')
+        self.conn = sqlite3.connect('scripts\exchange_rate.db')
         self.cursor = self.conn.cursor()
 
     def close_database(self):
