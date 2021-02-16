@@ -842,3 +842,5 @@
 [2021-02-14][www.mikugal.com] 每日签到成功
 [2021-02-15][www.mikugal.com] 用户名:麦小萌 当前金币:315 + 2
 [2021-02-15][www.mikugal.com] 每日签到成功
+[2021-02-16][www.mikugal.com] 用户名:麦小萌 当前金币:318 + 2
+[2021-02-16][www.mikugal.com] 每日签到失败
